@@ -1,1 +1,54 @@
-/* css */
+body { 
+    background-image: url(./imagem/img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+h1 {
+    font-family: 'Inter', sans-serif;
+    color: beige;
+    margin: 0 auto;
+}
+
+h3 { text-align: center;
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+#descodi, #codificado {
+    font-size: xx-large;
+    color: beige;
+}
+
+.container {
+font-family: 'Inter', sans-serif;
+font-style: normal;
+color: rgb(34, 34, 33);
+text-align: center;
+margin: 0 auto;
+background-color: rgb(207, 147, 175);
+width: 70%;
+padding: 2%;
+}
+
+textarea , input {
+    font-family: 'Inter', sans-serif;
+    color: rgb(207, 147, 175);
+    border-radius: 5px;
+    width: 40%;
+    height: 40px;
+    font-size: 1.125rem;
+    border: none;
+  } 
+  
+.botao {
+display: block; 
+margin: auto;
+font-family: 'Inter', sans-serif;
+border: none;
+color: rgb(207, 147, 175);
+border-radius: 100px;
+height: 30px;
+} 
+
