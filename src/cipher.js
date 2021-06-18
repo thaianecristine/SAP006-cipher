@@ -2,11 +2,14 @@ const cipher = {
   encode: function (offset, criptografarText) {
     let resultado = "";
 
+    if (typeof offset !== "number" || typeof criptografarText !== "string") {
+      throw new TypeError("Erroooou!")
+    }
     for (let i = 0; i < criptografarText.length; i++) {
       let codigoASC = criptografarText.charCodeAt(i);
 
-     //NUMEROS//
-     if (codigoASC >= 34 && codigoASC <= 63) {
+      //NUMEROS//
+      if (codigoASC >= 34 && codigoASC <= 63) {
         codigoASC = ((codigoASC - 34 + offset) % 29) + 34;
         resultado += String.fromCharCode(codigoASC)
 
@@ -33,12 +36,14 @@ const cipher = {
 
   decode: function (offset, descriptografarText) {
     let resultado = "";
-
+    if (typeof offset !== "number" || typeof descriptografarText !== "string") {
+      throw new TypeError("Erroooou!")
+    }
     for (let i = 0; i < descriptografarText.length; i++) {
       let codigoASC = descriptografarText.charCodeAt(i);
 
       if (codigoASC >= 34 && codigoASC <= 63) {
-        codigoASC = ((codigoASC - 34 - offset) % 29) + 34;
+        codigoASC = ((codigoASC - 63 - offset) % 29) + 63;
         resultado += String.fromCharCode(codigoASC)
       }
 
@@ -52,7 +57,7 @@ const cipher = {
       }
 
       else if (codigoASC >= 123 && codigoASC <= 254) {
-        codigoASC = ((codigoASC - 123 - offset) % 131) + 123;
+        codigoASC = ((codigoASC - 254 - offset) % 131) + 254;
         resultado += String.fromCharCode(codigoASC)
       }
 
