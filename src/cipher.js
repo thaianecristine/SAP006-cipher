@@ -60,7 +60,7 @@ const cipher = {
         codigoASC = ((codigoASC - 254 - offset) % 131) + 254;
         resultado += String.fromCharCode(codigoASC)
       }
-
+   
     }
     return resultado
   }
