@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Gerador de Cupons</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header class="container">
+
+    <div id="root">
+      <h1>Aqui geramos o seu cupom!</h1>
+      <h3>Nos compos abaixo você pode selecionar o texto que deseja, e o deslocamento no qual o alfabeto será iniciado.
+        Também é possivel inserir um código gerado e descodificá-lo. </h3>
+    </div>
+  </header>
+
+  <section>
+    <div>
+      <form class="container" action="">
+
+        <div class="desloc">
+          <p>Selecione aqui o deslocamento do seu alfabeto</p>
+          <input class="ïnput" type="number" id="offset" placeholder="Selecione o número" name="offset">
+        </div>
+
+        <div class="codigo">
+          <p>Aqui você pode inserir o texto que deseja tornar em cupom</p>
+          <textarea class="ïnput" id="criptografarText" name="criptografarText" placeholder="Escreva aqui"
+            type="text"></textarea>
+          <button class="botao" id="btnCodificar">Codificar</button>
+
+          <p id="codificado"></p>
+        </div>
+
+        <div class="descodificar">
+          <p> Quer descodificar? Então insira o código do cupom gerado aqui</p>
+          <textarea class="ïnput" id="descriptografarText" name="descriptografarText" placeholder="Escreva aqui"
+            type="text"></textarea>
+          <button class="botao" id="btnDescriptografar">Descodificar</button>
+
+          <p id="descodi"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="container"> Garantimos a segurança da sua informação.</footer>
+
+  <script src="index.js" type="module"></script>
+
+</body>
+
+</html>
